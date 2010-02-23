@@ -12,14 +12,14 @@ VALUE levenshtein_distance_string(VALUE self, VALUE rb_o1, VALUE rb_o2, VALUE rb
   /* Convert Ruby's s1 to C's s1. */
 
   rb_o1	= StringValue(rb_o1);
-  s1	= RSTRING(rb_o1)->ptr;
-  l1	= RSTRING(rb_o1)->len;
+  s1	= RSTRINGPTR(rb_o1);
+  l1	= RSTRINGLEN(rb_o1);
 
   /* Convert Ruby's s2 to C's s2. */
 
   rb_o2	= StringValue(rb_o2);
-  s2	= RSTRING(rb_o2)->ptr;
-  l2	= RSTRING(rb_o2)->len;
+  s2	= RSTRINGPTR(rb_o2);
+  l2	= RSTRINGLEN(rb_o2);
 
   /* Convert Ruby's threshold to C's threshold. */
 
