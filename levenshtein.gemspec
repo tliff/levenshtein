@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name		= "levenshtein"
-  s.version		= File.open("VERSION"){|f| f.read}.chomp
+  s.version		= "0.3.0" #File.open("VERSION"){|f| f.read}.chomp
   s.summary		= "Calculates the Levenshtein distance between two byte strings."
   s.description		= "Calculates the Levenshtein distance between two byte strings."
 
