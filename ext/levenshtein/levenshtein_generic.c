@@ -28,7 +28,7 @@ VALUE levenshtein_distance_generic(VALUE self, VALUE rb_o1, VALUE rb_o2, VALUE r
   /* Do the expensive calculation on a subset of the sequences, if possible, by removing the common prefix. */
 
   offset	= 0;
-  while RTEST(rb_funcall(rb_funcall(rb_o1, id_get, 1, INT2FIX(offset)), id_equal, 1, rb_funcall(rb_o2, id_get, 1, INT2FIX(offset)))) {
+  while (RTEST(rb_funcall(rb_funcall(rb_o1, id_get, 1, INT2FIX(offset)), id_equal, 1, rb_funcall(rb_o2, id_get, 1, INT2FIX(offset))))) {
     offset++;
   }
 
